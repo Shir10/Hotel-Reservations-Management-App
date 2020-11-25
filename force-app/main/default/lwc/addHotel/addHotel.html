@@ -1,0 +1,25 @@
+<template>
+    <lightning-card title="Add Hotel">
+        <lightning-layout>
+            <lightning-layout-item size="6">
+                <!-- Displaying fields to get information. -->
+                <lightning-input class="slds-m-around_medium" label="Name" type="text" name="name" value={formFields.name} 
+                    maxlength="255" onchange={changedHandler} autocomplete="new-password" required ></lightning-input>
+                <lightning-input class="slds-m-around_medium" label="Street" type="text" name="street" value={formFields.street} 
+                    maxlength="255" onchange={changedHandler} autocomplete="new-password" required ></lightning-input>
+                <lightning-input class="slds-m-around_medium" label="City" type="text" name="city" value={formFields.city} 
+                    maxlength="40" onchange={changedHandler} autocomplete="new-password" required ></lightning-input>
+                <lightning-input class="slds-m-around_medium" label="State" type="text" name="state" value={formFields.state} 
+                    maxlength="80" onchange={changedHandler} autocomplete="new-password" required ></lightning-input>
+                <lightning-input class="slds-m-around_medium" label="Postal Code" type="text" name="postalCode" value={formFields.postalCode} 
+                    maxlength="20" onchange={changedHandler} autocomplete="new-password" required ></lightning-input>
+                <lightning-input class="slds-m-around_medium" label="Country" type="text" name="country" value={formFields.country}
+                    maxlength="80" onchange={changedHandler} autocomplete="new-password" required ></lightning-input>
+                <lightning-input class="slds-m-around_medium" label="Picture" type="url" name="picture" value={formFields.picture} 
+                    onchange={changedHandler} autocomplete="new-password" ></lightning-input>
+                <br/>
+                <lightning-button class="slds-m-around_medium" label="Add" variant="brand" onclick={createAccount}></lightning-button>          
+            </lightning-layout-item>
+        </lightning-layout>
+    </lightning-card>
+</template>

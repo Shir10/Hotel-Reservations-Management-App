@@ -1,0 +1,34 @@
+<template>
+    <lightning-card title="Room Reservation">
+        <lightning-layout>
+            <lightning-layout-item size="6">
+ 
+                <!-- Displaying fields to get information. -->
+
+
+                <!-- <template if:true={contactsList.data}> -->
+                    <lightning-combobox class="slds-m-around_medium" name="contact" label="Contact" value={formFields.contactId} placeholder="-Select-"
+                        options={contactOptions} onchange={handleChangeContact} required ></lightning-combobox>
+                <!-- </template> -->
+                
+                <!-- <template if:true={hotelsList.data}> -->
+                    <lightning-combobox class="slds-m-around_medium" name="hotel" label="Hotel" value={formFields.hotelId} placeholder="-Select-"
+                        options={hotelOptions} onchange={handleChangeHotel} required ></lightning-combobox>
+                <!-- </template> -->
+                
+                <lightning-combobox class="slds-m-around_medium" name="roomType" label="Room Type" value={formFields.roomTypeId} placeholder="-Select-"
+                    options={roomTypeOptions} onchange={handleChangeRoomType} required ></lightning-combobox>
+                
+                <lightning-input class="slds-m-around_medium" label="Number of rooms" type="number" name="numberOfRooms" 
+                    value={formFields.numberOfRooms} onchange={changedHandler} maxlength="2" min="1"
+                    pattern="\d+" autocomplete="new-password" required ></lightning-input>
+
+                <lightning-input class="slds-m-around_medium" type="date" name="date" label="Date" value={formFields.date} 
+                    min={today} onchange={changedHandler} required ></lightning-input>
+                
+                <br/>
+                <lightning-button class="slds-m-around_medium" label="Add" variant="brand" onclick={createRoomReservation}></lightning-button>
+            </lightning-layout-item>
+        </lightning-layout>
+    </lightning-card>
+</template>

@@ -1,0 +1,32 @@
+<template>
+    <lightning-card title="Search Hotel">
+        <lightning-layout>
+            <lightning-layout-item size="6">
+ 
+                <!-- Displaying fields to get information. -->
+                <lightning-input class="slds-m-around_medium" type="search" name="hotelName" label="Hotel Name" value={formFields.hotelName} 
+                    maxlength="255" onchange={changedHandler} autocomplete="new-password" ></lightning-input>
+                <lightning-button class="slds-m-around_medium" label="Search" variant="brand" onclick={search}></lightning-button>
+                    
+                <table style="width:100%">
+                    <template for:each={searchResultHotels} for:item="hotel">
+                        <tr key={hotel.Id}>
+                            <td>
+                                <p class="hotel-name">{hotel.Name}</p>
+                                <p>{hotel.BillingStreet}</p>
+                                <p>{hotel.BillingCity}</p>
+                                <p>{hotel.BillingState} {hotel.BillingPostalCode}</p>
+                                <p>{hotel.BillingCountry}</p>
+                            </td>
+                            <td>
+                                <img src={hotel.Picture__c}>
+                            </td>
+                        </tr>
+                    </template>
+                </table>                
+                <br/>
+                
+            </lightning-layout-item>
+        </lightning-layout>
+    </lightning-card>
+</template>

@@ -1,0 +1,58 @@
+{
+  "records": [
+    {
+      "attributes": {
+        "type": "Room_Type__c",
+        "referenceId": "RoomTypeRef1"
+      },
+      "Name": "King Suites",
+      "Hotel__c": "AccountRef3",
+      "Number_Of_Available_Rooms__c": 10
+    },
+    {
+      "attributes": {
+        "type": "Room_Type__c",
+        "referenceId": "RoomTypeRef2"
+      },
+      "Name": "Standard",
+      "Hotel__c": "AccountRef1",
+      "Number_Of_Available_Rooms__c": 100
+    },
+    {
+      "attributes": {
+        "type": "Room_Type__c",
+        "referenceId": "RoomTypeRef3"
+      },
+      "Name": "Deluxe Queens",
+      "Hotel__c": "AccountRef3",
+      "Number_Of_Available_Rooms__c": 5
+    },
+    {
+      "attributes": {
+        "type": "Room_Type__c",
+        "referenceId": "RoomTypeRef4"
+      },
+      "Name": "Premier",
+      "Hotel__c": "AccountRef1",
+      "Number_Of_Available_Rooms__c": 10
+    },
+    {
+      "attributes": {
+        "type": "Room_Type__c",
+        "referenceId": "RoomTypeRef5"
+      },
+      "Name": "Premier One Bedroom Suite",
+      "Hotel__c": "AccountRef1",
+      "Number_Of_Available_Rooms__c": 1
+    },
+    {
+      "attributes": {
+        "type": "Room_Type__c",
+        "referenceId": "RoomTypeRef6"
+      },
+      "Name": "Junior Suites",
+      "Hotel__c": "AccountRef3",
+      "Number_Of_Available_Rooms__c": 50
+    }
+  ]
+}

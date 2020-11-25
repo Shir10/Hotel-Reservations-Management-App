@@ -1,0 +1,21 @@
+<template>
+    <lightning-card title="Add Room Type">
+        <lightning-layout>
+            <lightning-layout-item size="6">
+ 
+                <!-- Displaying fields to get information. -->
+                <lightning-input class="slds-m-around_medium" label="Name" type="text" name="name" value={formFields.name}
+                    onchange={changedHandler} maxlength="80" autocomplete="new-password" required ></lightning-input>
+                <template if:true={hotelsList.data}>
+                    <lightning-combobox class="slds-m-around_medium" name="hotel" label="Hotel" value={formFields.hotelID} placeholder="-Select-"
+                        options={hotelOptions} onchange={handleChangeHotel} required ></lightning-combobox>
+                </template>    
+                <lightning-input class="slds-m-around_medium" label="Available Rooms" type="number" name="availableRooms" 
+                    value={formFields.availableRooms} onchange={changedHandler} maxlength="3" min="1" pattern="\d+"
+                    autocomplete="new-password" required ></lightning-input>                            
+                <br/>
+                <lightning-button class="slds-m-around_medium" label="Add" variant="brand" onclick={createRoomType}></lightning-button>
+            </lightning-layout-item>
+        </lightning-layout>
+    </lightning-card>
+</template>
